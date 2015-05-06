@@ -1,0 +1,49 @@
+
+<?php echo $this->getContent(); ?>
+
+<?php echo $this->tag->form("product/save") ?>
+
+<table width="100%">
+    <tr>
+        <td align="left"><?php echo $this->tag->linkTo(array("product", "Back")) ?></td>
+        <td align="right"><?php echo $this->tag->submitButton("Save") ?></td>
+    </tr>
+</table>
+
+<div align="center">
+    <h1>Edit product</h1>
+</div>
+
+<table>
+    <tr>
+        <td align="right">
+            <label for="name">Name</label>
+        </td>
+        <td align="left">
+                <?php echo $this->tag->textField(array("name", "type" => "date")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="price">Price</label>
+        </td>
+        <td align="left">
+                <?php echo $this->tag->textField(array("price", "type" => "date")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="description">Description</label>
+        </td>
+        <td align="left">
+                <?php echo $this->tag->textField(array("description", "type" => "date")) ?>
+        </td>
+    </tr>
+
+    <tr>
+        <td><?php echo $this->tag->hiddenField("id") ?></td>
+        <td><?php echo $this->tag->submitButton("Save") ?></td>
+    </tr>
+</table>
+
+</form>
